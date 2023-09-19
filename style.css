@@ -1,0 +1,131 @@
+:root {
+  --primary-purple: hsl(259, 100%, 65%);
+  --primary-light-red: hsl(0, 100%, 65%);
+  --neutral-white: hsl(0, 0%, 100%);
+  --neutral-offWhite: hsl(0, 0%, 94%);
+  --neutral-lightGrey: hsl(0, 0%, 86%);
+  --neutral-smokeyGrey: hsl(0, 1%, 44%);
+  --neutral-offBlack: hsl(0, 0%, 8%);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+img,
+picture,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+input {
+  padding: 0.625rem;
+  max-width: 150px;
+  border-radius: 8px;
+  font-size: 2rem;
+}
+
+.input-error {
+  border: 1px solid var(--primary-light-red);
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+  background-color: var(--neutral-offWhite);
+}
+
+.card {
+  background-color: var(--neutral-white);
+  padding: 2rem;
+  border-radius: 1rem 1rem 8rem 1rem;
+  box-shadow: 12px 12px 12px 11px rgba(0, 0, 0, 0.1);
+}
+
+.input-fields {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+label {
+  color: var(--neutral-smokeyGrey);
+}
+
+.label-error {
+  color: var(--primary-light-red);
+}
+
+.mid-section {
+  display: flex;
+  justify-content: flex-end;
+  width: 600px;
+  border-top: 1px solid hsl(0, 0%, 86%);
+  margin-bottom: 0;
+}
+
+@media (max-width: 680px) {
+  .mid-section {
+    justify-content: center;
+    width: 375px;
+    border-top: 1px solid hsl(0, 0%, 86%);
+  }
+
+  .input-fields {
+    margin-bottom: 4rem;
+  }
+
+  .result-text {
+    margin-top: 2rem !important;
+  }
+
+  input {
+    max-width: 120px;
+  }
+}
+
+#form {
+  color: red;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.calculate {
+  background-color: var(--primary-purple);
+  padding: 1rem;
+  max-width: 4rem;
+  border-radius: 50%;
+  cursor: pointer;
+  transform: translateY(-32px);
+}
+
+.result-text {
+  margin-top: 0;
+  font-size: 4rem;
+  font-weight: 800;
+  font-style: italic;
+  line-height: 1rem;
+}
+
+#result-years,
+#result-months,
+#result-days {
+  color: var(--primary-purple);
+  font-size: 4.25rem;
+}
